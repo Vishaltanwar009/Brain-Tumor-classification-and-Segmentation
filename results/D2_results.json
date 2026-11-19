@@ -1,0 +1,127 @@
+{
+  "dataset": "D2",
+  "note": "Values copied from the printed output of the final notebook cell (the original file was not available). Numbers are rounded to 4 decimals as printed.",
+  "classes": [
+    "astrocytoma",
+    "glioblastoma",
+    "gliomas",
+    "meningioma",
+    "neurocytoma"
+  ],
+  "n_folds": 5,
+  "test_samples": 693,
+  "folds": [
+    {
+      "acc": 0.9928,
+      "prec": 0.9894,
+      "rec": 0.9858,
+      "f1": 0.9875,
+      "dice": 0.8082
+    },
+    {
+      "acc": 0.9928,
+      "prec": 0.9881,
+      "rec": 0.987,
+      "f1": 0.9876,
+      "dice": 0.8061
+    },
+    {
+      "acc": 0.9942,
+      "prec": 0.9913,
+      "rec": 0.9889,
+      "f1": 0.99,
+      "dice": 0.8055
+    },
+    {
+      "acc": 0.9928,
+      "prec": 0.9894,
+      "rec": 0.9858,
+      "f1": 0.9875,
+      "dice": 0.8025
+    },
+    {
+      "acc": 0.9942,
+      "prec": 0.9927,
+      "rec": 0.9877,
+      "f1": 0.9899,
+      "dice": 0.8003
+    }
+  ],
+  "mean_std": {
+    "acc": [
+      0.9934,
+      0.0007
+    ],
+    "prec": [
+      0.9902,
+      0.0016
+    ],
+    "rec": [
+      0.987,
+      0.0012
+    ],
+    "f1": [
+      0.9885,
+      0.0012
+    ],
+    "dice": [
+      0.8045,
+      0.0028
+    ]
+  },
+  "ensemble": {
+    "acc": 0.9928,
+    "prec": 0.9894,
+    "rec": 0.9858,
+    "f1": 0.9875,
+    "dice": 0.8142
+  },
+  "ensemble_confusion_matrix_rows_true_cols_pred": [
+    [
+      105,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      146,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      248,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      128,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      0,
+      61
+    ]
+  ],
+  "hp_notebook_defaults": {
+    "epochs": 35,
+    "patience": 8,
+    "batch": 16,
+    "lr": 0.0002,
+    "wd": 0.0001,
+    "ema": 0.999,
+    "n_folds": 5,
+    "test_frac": 0.2,
+    "seed": 42
+  }
+}
