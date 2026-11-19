@@ -117,12 +117,24 @@ def get_device(requested: str) -> torch.device:
 
 def build_model(args):
     try:
-        from src.models.mpfnet import MPFNet
-    except ImportError as e:
-        print(f"[ERROR] Failed to import model: {e}")
-        print("Please ensure segmentation-models-pytorch is installed:")
-        print("    pip install segmentation-models-pytorch")
-        sys.exit(1)
+        import segmentation_models_pytorch as smp
+    except ImportError:
+        print("[INFO] 'segmentation-models-pytorch' is required but not installed.")
+        print("[INFO] Attempting to install 'segmentation-models-pytorch' via pip...")
+        try:
+            import subprocess
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "segmentation-models-pytorch"])
+            import segmentation_models_pytorch as smp
+            print("[INFO] Successfully installed 'segmentation-models-pytorch'!")
+        except Exception as err:
+            print(f"\n[ERROR] Could not automatically install segmentation-models-pytorch: {err}")
+            print("Please run the following command in your terminal manually:")
+            print("    pip install segmentation-models-pytorch")
+            print("Or install all project dependencies with:")
+            print("    pip install -r requirements.txt\n")
+            sys.exit(1)
+
+    from src.models.mpfnet import MPFNet
 
     use_aspp = (args.model == "aspp_fpn")
     use_fpn = (args.model == "aspp_fpn")
