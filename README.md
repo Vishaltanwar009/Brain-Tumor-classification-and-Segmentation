@@ -2,8 +2,16 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/)
+[![Paper PDF](https://img.shields.io/badge/Paper-IEEE%20Format%20PDF-red.svg)](MPF_Net_IEEE_Research_Paper.pdf)
+[![Overleaf LaTeX](https://img.shields.io/badge/Overleaf-LaTeX%20Bundle-brightgreen.svg)](MPFNet_IEEE_Paper_Overleaf.zip)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Academic Audit: Passed](https://img.shields.io/badge/Academic%20Audit-Defensible%20%26%20Reproducible-success.svg)]()
+
+> 📄 **Academic Research Paper (IEEE Journal Format):**  
+> Complete 10-page publication-ready paper including mathematical formulations, ablation studies, and multi-dataset benchmarks:
+> - **Compiled PDF:** [`MPF_Net_IEEE_Research_Paper.pdf`](MPF_Net_IEEE_Research_Paper.pdf)
+> - **LaTeX Source & Tables:** [`IEEE_Research_Paper/`](IEEE_Research_Paper/)
+> - **Overleaf ZIP Package:** [`MPFNet_IEEE_Paper_Overleaf.zip`](MPFNet_IEEE_Paper_Overleaf.zip)
 
 ### Project Team & Authors
 - **Vishal Tanwar** — Roll No: `2024UCA1809`

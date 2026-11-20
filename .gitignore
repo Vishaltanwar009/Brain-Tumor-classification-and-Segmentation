@@ -79,3 +79,14 @@ checkpoints/
 
 # Large result archives (exceeds GitHub 100MB file limit; attach via GitHub Releases or Git LFS)
 *.zip
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.blg
+
+# Allow paper Overleaf zip
+!MPFNet_IEEE_Paper_Overleaf.zip
+!IEEE_Research_Paper/MPFNet_IEEE_Paper_Overleaf.zip

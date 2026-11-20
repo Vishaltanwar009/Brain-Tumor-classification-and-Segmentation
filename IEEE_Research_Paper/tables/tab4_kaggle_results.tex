@@ -1,0 +1,28 @@
+% tab4_kaggle_results.tex
+% Table IV: Kaggle Dataset Results vs BRAIN-CNet (Properly fitted, no cut-off)
+\begin{table*}[!t]
+\caption{Classification and Segmentation Results on Kaggle Datasets: MPF-Net (Ensemble vs.\ 5-Fold Cross-Validation) vs.\ BRAIN-CNet}
+\label{tab:kaggle_results}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc|ccccc}
+\hline
+& & \multicolumn{5}{c|}{\textbf{MPF-Net (5-Fold Ensemble)}} & \multicolumn{5}{c}{\textbf{MPF-Net (5-Fold Mean $\pm$ Standard Deviation)}} \\
+\textbf{Dataset} & \textbf{BRAIN-CNet~\cite{musthafa2026braincnet}} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Dice} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Dice} \\
+\hline
+D1 (Atika Akter, 4-class) & F1: 0.966$\pm$0.005, D: 0.929$\pm$0.004 &
+  \textbf{0.9965} & 0.9963 & 0.9967 & \textbf{0.9965} & \textbf{0.9324} &
+  0.9962$\pm$0.0009 & 0.9962$\pm$0.0007 & 0.9961$\pm$0.0009 & 0.9962$\pm$0.0008 & 0.9271$\pm$0.0018 \\
+D2 (Shubham Gajjar, 5-class$^{\dagger}$) & N/A$^{\dagger}$ &
+  0.9928 & 0.9894 & 0.9858 & 0.9875 & 0.8142 &
+  0.9934$\pm$0.0007 & 0.9902$\pm$0.0016 & 0.9870$\pm$0.0012 & 0.9885$\pm$0.0012 & 0.8045$\pm$0.0028 \\
+D3 (Mixed Dataset, 4-class) & F1: 0.982$\pm$0.003, D: 0.875$\pm$0.004 &
+  \textbf{0.9992} & 0.9992 & 0.9992 & \textbf{0.9992} & \textbf{0.8996} &
+  0.9975$\pm$0.0008 & 0.9975$\pm$0.0008 & 0.9975$\pm$0.0008 & 0.9975$\pm$0.0008 & 0.8927$\pm$0.0050 \\
+\hline
+\multicolumn{12}{l}{$^{\dagger}$ D2 contains 5 tumor classes with no normal class; BRAIN-CNet evaluated a 4-class configuration. Direct numeric comparison is not valid.} \\
+\multicolumn{12}{l}{\quad All Kaggle experiments employ an 80/20 stratified slice-level holdout split.}
+\end{tabular}%
+}
+\end{table*}

@@ -1,0 +1,24 @@
+% tab2_figshare_classification.tex
+% Table II: Figshare Classification Results — Verified from JSON (Properly fitted, no cut-off)
+\begin{table}[!t]
+\caption{Classification Performance on Figshare Dataset}
+\label{tab:figshare_cls}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc|c}
+\hline
+\textbf{Method} & \textbf{Accuracy} & \textbf{Macro-P} & \textbf{Macro-R} & \textbf{Macro-F1} & \textbf{AUC (OvR)} \\
+\hline
+Sahoo et al.~\cite{sahoo2023brain} & 0.9742 & -- & -- & -- & -- \\
+\hline
+Exp 1: Baseline ($256^2$, Patient$^\star$) & 0.9777 & 0.9849 & 0.9671 & 0.9750 & 0.9996 \\
+Exp 2: +ASPP+FPN ($512^2$, Patient$^\star$) & \textbf{0.9793} & 0.9845 & 0.9701 & 0.9766 & 0.9993 \\
+\hline
+Exp 3: +ASPP+FPN ($512^2$, Slice$^\dagger$) & 0.9935 & 0.9930 & 0.9906 & 0.9917 & 1.0000 \\
+\hline
+\multicolumn{6}{l}{$^\star$ Patient-level: 46 patients, 629 test slices. Honest evaluation without leakage.} \\
+\multicolumn{6}{l}{$^\dagger$ Slice-level: 154 patients overlap; inflated by $+1.58\,\%$ accuracy vs.\ patient-level.}
+\end{tabular}%
+}
+\end{table}

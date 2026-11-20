@@ -1,0 +1,38 @@
+% tab6_perclass_figshare.tex
+% Table VI: Per-Class Performance on Figshare Across All Three Experiments (Exp 1, Exp 2, and Exp 3)
+\begin{table*}[!t]
+\caption{Comprehensive Per-Class Classification and Segmentation Performance on Figshare Dataset Across Experiments 1, 2, and 3}
+\label{tab:perclass_figshare}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|ccccc|ccccc|ccccc}
+\hline
+\multirow{2}{*}{\textbf{Class}} &
+\multicolumn{5}{c|}{\textbf{Exp 1: Baseline 256$^2$ (Patient-Level, $N=629$)}} &
+\multicolumn{5}{c|}{\textbf{Exp 2: +ASPP+FPN 512$^2$ (Patient-Level, $N=629$)}} &
+\multicolumn{5}{c}{\textbf{Exp 3: +ASPP+FPN 512$^2$ (Slice-Level$^\star$, $N=307$)}} \\
+& \textbf{Prec} & \textbf{Rec} & \textbf{F1} & \textbf{AUC} & \textbf{Dice$_\mu \pm$SD}
+& \textbf{Prec} & \textbf{Rec} & \textbf{F1} & \textbf{AUC} & \textbf{Dice$_\mu \pm$SD}
+& \textbf{Prec} & \textbf{Rec} & \textbf{F1} & \textbf{AUC} & \textbf{Dice$_\mu \pm$SD} \\
+\hline
+Meningioma & 1.0000 & 0.9014 & 0.9481 & 0.9989 & 0.9160$\pm$0.1413
+           & 0.9924 & 0.9155 & 0.9524 & 0.9983 & 0.9216$\pm$0.1089
+           & 1.0000 & 0.9718 & 0.9857 & 0.9999 & 0.9217$\pm$0.1248 \\
+Glioma     & 0.9548 & 1.0000 & 0.9769 & 0.9997 & 0.6727$\pm$0.2860
+           & 0.9610 & 1.0000 & 0.9801 & 0.9997 & 0.6802$\pm$0.2829
+           & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 0.7614$\pm$0.2658 \\
+Pituitary  & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 0.8291$\pm$0.1651
+           & 1.0000 & 0.9948 & 0.9974 & 1.0000 & 0.8318$\pm$0.1683
+           & 0.9789 & 1.0000 & 0.9894 & 0.9998 & 0.8951$\pm$0.0773 \\
+\hline
+\textbf{Macro-Avg} & \textbf{0.9849} & \textbf{0.9671} & \textbf{0.9750} & \textbf{0.9996} & \textbf{0.7751$\pm$0.2481}
+                   & \textbf{0.9845} & \textbf{0.9701} & \textbf{0.9766} & \textbf{0.9993} & \textbf{0.7808$\pm$0.2428}
+                   & \textbf{0.9930} & \textbf{0.9906} & \textbf{0.9917} & \textbf{1.0000} & \textbf{0.8390$\pm$0.2090} \\
+\hline
+\multicolumn{16}{l}{Test support: Exp 1 and Exp 2 (Meningioma: 142, Glioma: 296, Pituitary: 191); Exp 3 (Meningioma: 71, Glioma: 143, Pituitary: 93).} \\
+\multicolumn{16}{l}{Global pooled Dice: Exp 1 = 0.8131, Exp 2 = 0.8147, Exp 3 = 0.8797. Defined HD95$_\mu$: Exp 1 = 9.95\,px (at $256^2$); Exp 2 = 20.24\,px (at $512^2$); Exp 3 = 14.63\,px (at $512^2$).} \\
+\multicolumn{16}{l}{$^\star$ Exp 3 slice-level results demonstrate artificial inflation (+1.51\,\% F1, +5.82\,\% Dice) caused by patient identity leakage across partitions.}
+\end{tabular}%
+}
+\end{table*}

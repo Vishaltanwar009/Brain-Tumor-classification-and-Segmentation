@@ -1,0 +1,26 @@
+% tab3_figshare_segmentation.tex
+% Table III: Figshare Segmentation Results — Verified from JSON (Properly fitted, no cut-off)
+\begin{table}[!t]
+\caption{Segmentation Performance on Figshare Dataset}
+\label{tab:figshare_seg}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Method} & \textbf{Dice$_\mu$} & \textbf{Dice$_G$} & \textbf{IoU$_\mu$} & \textbf{Prec$_\mu$} & \textbf{Rec$_\mu$} & \textbf{HD95$_\mu$} \\
+\hline
+Sahoo et al.~\cite{sahoo2023brain} & 0.9011 & -- & -- & -- & -- & -- \\
+\hline
+Exp 1: Baseline ($256^2$, Patient$^\star$) & 0.7751 & 0.8131 & 0.6840 & 0.7892 & 0.8153 & 9.95\,px \\
+Exp 2: +ASPP+FPN ($512^2$, Patient$^\star$) & \textbf{0.7808} & \textbf{0.8147} & \textbf{0.6902} & 0.7907 & 0.8253 & 20.24\,px$^\dagger$ \\
+\hline
+Exp 3: +ASPP+FPN ($512^2$, Slice$^\ddagger$) & 0.8390 & 0.8797 & 0.7615 & 0.8308 & 0.8746 & 14.63\,px \\
+\hline
+\multicolumn{7}{l}{Dice$_\mu$ = mean per-image Dice; Dice$_G$ = global pixel-pooled Dice (threshold = 0.5).} \\
+\multicolumn{7}{l}{$^\star$ Patient-level: 46 patients, 629 test slices ($n_{\text{empty}}$: Exp 1 = 20, Exp 2 = 23).} \\
+\multicolumn{7}{l}{$^\dagger$ Exp 2 HD95 evaluated at $512\times 512$ scale ($\approx 10.1$\,px normalized to $256^2$).} \\
+\multicolumn{7}{l}{$^\ddagger$ Slice-level: inflated by $+6.39\,\%$ Dice due to train/test patient leakage.}
+\end{tabular}%
+}
+\end{table}

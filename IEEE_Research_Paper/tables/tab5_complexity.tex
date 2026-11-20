@@ -1,0 +1,30 @@
+% tab5_complexity.tex
+% Table V: Model Complexity and Inference Latency Comparison (Including Exp 1, Exp 2, and Exp 3)
+\begin{table}[!t]
+\caption{Model Complexity, Computational Cost, and Inference Latency Across Architectures and Experimental Configurations}
+\label{tab:complexity}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccccc}
+\hline
+\textbf{Model / Experiment} & \textbf{Resolution} & \textbf{Params (M)} & \textbf{FLOPs (G)} & \textbf{T4 (ms)} & \textbf{RTX\,4050 (ms)} \\
+\hline
+VGG16~\cite{simonyan2015vgg} & $224{\times}224$ & 138.00 & 15.50 & 15--20 & -- \\
+ResNet-50~\cite{he2016resnet} & $224{\times}224$ & 25.60 & 3.90 & 8--12 & -- \\
+Standard U-Net~\cite{ronneberger2015unet} & $512{\times}512$ & 31.04 & 386.36 & 1--3 & -- \\
+BRAIN-CNet~\cite{musthafa2026braincnet} & $224{\times}224$ & 1.68 & 1.80 & 3--5 & -- \\
+\hline
+Kaggle D2 (5-class MPF-Net) & $224{\times}224$ & 6.08 & 4.42 & 12.10 & 35.31 \\
+Figshare Exp 1: Baseline (Patient) & $256{\times}256$ & 6.08 & 5.77 & 13.40 & 37.10 \\
+Figshare Exp 2: +ASPP+FPN (Patient) & $512{\times}512$ & 6.72 & 28.45 & 24.30 & 68.50 \\
+Figshare Exp 3: +ASPP+FPN (Slice$^\star$) & $512{\times}512$ & 6.72 & 28.45 & 24.30 & 68.50 \\
+Kaggle D1 / D3: MPF-Net & $512{\times}512$ & 6.08 & 23.10 & 20.54 & 58.20 \\
+\hline
+\multicolumn{6}{l}{FLOPs computed as multiply-accumulate operations $\times 2$ for single image batch.} \\
+\multicolumn{6}{l}{T4 GPU latency measured with PyTorch AMP enabled (CUDA 12.6).} \\
+\multicolumn{6}{l}{RTX 4050 Laptop GPU latency measured locally on physical hardware.} \\
+\multicolumn{6}{l}{$^\star$ Exp 3 shares identical architecture with Exp 2; evaluated under slice-level partitioning.}
+\end{tabular}%
+}
+\end{table}

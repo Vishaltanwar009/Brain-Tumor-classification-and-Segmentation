@@ -1,0 +1,280 @@
+% ============================================================
+% references.bib — Verified BibTeX references for MPF-Net paper
+% All entries verified against known publication records.
+% NO fabricated DOIs or invented citations.
+% ============================================================
+
+% --- Benchmark Datasets (All 4 Datasets with Public Links) ---
+@misc{dataset_d1_atika,
+  author       = {Atika Akter},
+  title        = {Brain Tumor Segmentation Dataset},
+  howpublished = {\url{https://www.kaggle.com/datasets/atikaakter11/brain-tumor-segmentation-dataset}},
+  year         = {2023},
+  note         = {Kaggle Benchmark Dataset D1}
+}
+
+@misc{dataset_d2_gajjar,
+  author       = {Shubham Gajjar},
+  title        = {Brain Tumor Classification (2D)},
+  howpublished = {\url{https://www.kaggle.com/datasets/shubhamgajjar/brain-tumor-classification-2d}},
+  year         = {2023},
+  note         = {Kaggle Benchmark Dataset D2}
+}
+
+@misc{dataset_d3_junaid,
+  author       = {Wajeeh Aldeen Al-Junaid},
+  title        = {Mixed Brain Tumor Dataset},
+  howpublished = {\url{https://www.kaggle.com/datasets/wajeehaldeenaljunaid/mixed-brain-tumor-dataset}},
+  year         = {2024},
+  note         = {Kaggle Benchmark Dataset D3}
+}
+
+@misc{dataset_figshare_cheng,
+  author       = {Jun Cheng},
+  title        = {Brain Tumor Dataset},
+  howpublished = {\url{https://doi.org/10.6084/m9.figshare.1512427}},
+  note         = {Kaggle mirror: \url{https://www.kaggle.com/datasets/ashkhagan/figshare-brain-tumor-dataset}},
+  year         = {2017}
+}
+
+% --- Base Paper ---
+@article{musthafa2026braincnet,
+  author    = {Musthafa, Mohamed Shaffee and others},
+  title     = {{BRAIN-CNet}: A Multi-Task Convolutional Neural Network for
+               Simultaneous Brain Tumor Classification and Segmentation},
+  journal   = {Journal of Imaging Informatics in Medicine},
+  year      = {2026},
+  doi       = {10.1007/s10278-026-02063-2},
+  note      = {Base paper for this work}
+}
+
+% --- Comparison Method (Figshare) ---
+@article{sahoo2023brain,
+  author    = {Sahoo, Priyadarsan and Bhoi, Sourav Kumar and
+               Panda, Mahendra Kumar and Nanda, Sasmita},
+  title     = {Brain Tumor Detection and Segmentation in {MRI} Images Using
+               Improved {DenseNet}-201 Based {FCN}},
+  journal   = {Biocybernetics and Biomedical Engineering},
+  volume    = {43},
+  number    = {4},
+  pages     = {621--641},
+  year      = {2023},
+  doi       = {10.1016/j.bbe.2023.08.003}
+}
+
+% --- Figshare Dataset ---
+@article{cheng2015enhanced,
+  author    = {Cheng, Jun and Huang, Wei and Cao, Shuanglang and Yang, Ru and
+               Yang, Wei and Yun, Zhaoqiang and Wang, Zhijian and Feng, Qianjin},
+  title     = {Enhanced Performance of Brain Tumor Classification via Tumor
+               Region Augmentation and Partition},
+  journal   = {PLOS ONE},
+  volume    = {10},
+  number    = {10},
+  pages     = {e0140381},
+  year      = {2015},
+  doi       = {10.1371/journal.pone.0140381}
+}
+
+% --- Encoder: EfficientNet ---
+@inproceedings{tan2019efficientnet,
+  author    = {Tan, Mingxing and Le, Quoc V.},
+  title     = {{EfficientNet}: Rethinking Model Scaling for Convolutional
+               Neural Networks},
+  booktitle = {Proceedings of the 36th International Conference on Machine
+               Learning (ICML)},
+  pages     = {6105--6114},
+  year      = {2019}
+}
+
+% --- Decoder Attention: scSE ---
+@article{roy2019concurrent,
+  author    = {Roy, Abhijit Guha and Navab, Nassir and Wachinger, Christian},
+  title     = {Concurrent Spatial and Channel Squeeze-and-Excitation in
+               Fully Convolutional Networks},
+  journal   = {IEEE Transactions on Medical Imaging},
+  volume    = {38},
+  number    = {2},
+  pages     = {540--549},
+  year      = {2019},
+  doi       = {10.1109/TMI.2018.2885438}
+}
+
+% --- Architecture: U-Net ---
+@inproceedings{ronneberger2015unet,
+  author    = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  title     = {{U-Net}: Convolutional Networks for Biomedical Image Segmentation},
+  booktitle = {Medical Image Computing and Computer-Assisted Intervention
+               (MICCAI)},
+  pages     = {234--241},
+  year      = {2015},
+  doi       = {10.1007/978-3-319-24574-4_28}
+}
+
+% --- Context Module: ASPP / DeepLab ---
+@inproceedings{chen2018deeplabv3plus,
+  author    = {Chen, Liang-Chieh and Zhu, Yukun and Papandreou, George and
+               Schroff, Florian and Adam, Hartwig},
+  title     = {Encoder-Decoder with Atrous Separable Convolution for Semantic
+               Image Segmentation},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages     = {833--851},
+  year      = {2018},
+  doi       = {10.1007/978-3-030-01234-2_49}
+}
+
+% --- Feature Pyramid: FPN ---
+@inproceedings{lin2017fpn,
+  author    = {Lin, Tsung-Yi and Doll\'{a}r, Piotr and Girshick, Ross and
+               He, Kaiming and Hariharan, Bharath and Belongie, Serge},
+  title     = {Feature Pyramid Networks for Object Detection},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and
+               Pattern Recognition (CVPR)},
+  pages     = {2117--2125},
+  year      = {2017}
+}
+
+% --- Multi-Task Uncertainty Weighting: Kendall ---
+@inproceedings{kendall2018multitask,
+  author    = {Kendall, Alex and Gal, Yarin and Cipolla, Roberto},
+  title     = {Multi-Task Learning Using Uncertainty to Weigh Losses for
+               Scene Geometry and Semantics},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and
+               Pattern Recognition (CVPR)},
+  pages     = {7482--7491},
+  year      = {2018}
+}
+
+% --- nnU-Net ---
+@article{isensee2021nnu,
+  author    = {Isensee, Fabian and Jaeger, Paul F. and Kohl, Simon A. A. and
+               Petersen, Jens and Maier-Hein, Klaus H.},
+  title     = {{nnU-Net}: A Self-Configuring Method for Deep Learning-Based
+               Biomedical Image Segmentation},
+  journal   = {Nature Methods},
+  volume    = {18},
+  pages     = {203--211},
+  year      = {2021},
+  doi       = {10.1038/s41592-020-01008-z}
+}
+
+% --- VGG16 Brain Tumor Reference ---
+@article{wong2025vgg,
+  author    = {Wong, Lai-Kuan and others},
+  title     = {Brain Tumor Classification from {MRI} Scans Using a Hybrid
+               {VGG16} Convolutional Neural Network},
+  journal   = {PLOS ONE},
+  volume    = {20},
+  pages     = {e0322624},
+  year      = {2025},
+  doi       = {10.1371/journal.pone.0322624}
+}
+
+% --- Early Brain Tumor CNN ---
+@article{havaei2017brain,
+  author    = {Havaei, Mohammad and Davy, Axel and Warde-Farley, David and
+               Biard, Antoine and Courville, Aaron and Bengio, Yoshua and
+               Pal, Chris and Jodoin, Pierre-Marc and Larochelle, Hugo},
+  title     = {Brain Tumor Segmentation with Deep Neural Networks},
+  journal   = {Medical Image Analysis},
+  volume    = {35},
+  pages     = {18--31},
+  year      = {2017},
+  doi       = {10.1016/j.media.2016.05.004}
+}
+
+% --- ResNet ---
+@inproceedings{he2016resnet,
+  author    = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  title     = {Deep Residual Learning for Image Recognition},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and
+               Pattern Recognition (CVPR)},
+  pages     = {770--778},
+  year      = {2016}
+}
+
+% --- VGG ---
+@article{simonyan2015vgg,
+  author    = {Simonyan, Karen and Zisserman, Andrew},
+  title     = {Very Deep Convolutional Networks for Large-Scale Image
+               Recognition},
+  journal   = {arXiv preprint arXiv:1409.1556},
+  year      = {2015}
+}
+
+% --- Squeeze-and-Excitation (SE) Networks ---
+@inproceedings{hu2018senet,
+  author    = {Hu, Jie and Shen, Li and Sun, Gang},
+  title     = {Squeeze-and-Excitation Networks},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and
+               Pattern Recognition (CVPR)},
+  pages     = {7132--7141},
+  year      = {2018}
+}
+
+% --- Tversky Loss ---
+@inproceedings{salehi2017tversky,
+  author    = {Salehi, Seyed Sadegh Mohseni and Erdogmus, Deniz and
+               Gholipour, Ali},
+  title     = {Tversky Loss Function for Image Segmentation Using 3D Fully
+               Convolutional Deep Networks},
+  booktitle = {International Workshop on Machine Learning in Medical Imaging
+               (MLMI)},
+  pages     = {379--387},
+  year      = {2017},
+  doi       = {10.1007/978-3-319-67389-9_44}
+}
+
+% --- Batch Normalization ---
+@inproceedings{ioffe2015batchnorm,
+  author    = {Ioffe, Sergey and Szegedy, Christian},
+  title     = {Batch Normalization: Accelerating Deep Network Training by
+               Reducing Internal Covariate Shift},
+  booktitle = {Proceedings of the 32nd International Conference on Machine
+               Learning (ICML)},
+  pages     = {448--456},
+  year      = {2015}
+}
+
+% --- AdamW ---
+@inproceedings{loshchilov2019adamw,
+  author    = {Loshchilov, Ilya and Hutter, Frank},
+  title     = {Decoupled Weight Decay Regularization},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019}
+}
+
+% --- EMA ---
+@article{polyak1992ema,
+  author    = {Polyak, Boris T. and Juditsky, Anatoli B.},
+  title     = {Acceleration of Stochastic Approximation by Averaging},
+  journal   = {SIAM Journal on Control and Optimization},
+  volume    = {30},
+  number    = {4},
+  pages     = {838--855},
+  year      = {1992}
+}
+
+% --- Mixed Precision Training ---
+@inproceedings{micikevicius2018amp,
+  author    = {Micikevicius, Paulius and Narang, Sharan and Alben, Jonah and
+               Diamos, Gregory and Elsen, Erich and Garcia, David and
+               Ginsburg, Boris and Houston, Michael and Kuchaiev, Oleksii and
+               Venkatesh, Ganesh and Wu, Hao},
+  title     = {Mixed Precision Training},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2018}
+}
+
+% --- BraTS Challenge ---
+@article{menze2015brats,
+  author    = {Menze, Bjoern H. and others},
+  title     = {The Multimodal Brain Tumor Image Segmentation Benchmark
+               ({BRATS})},
+  journal   = {IEEE Transactions on Medical Imaging},
+  volume    = {34},
+  number    = {10},
+  pages     = {1993--2024},
+  year      = {2015},
+  doi       = {10.1109/TMI.2014.2377694}
+}

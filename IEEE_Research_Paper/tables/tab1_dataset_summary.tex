@@ -1,0 +1,22 @@
+% tab1_dataset_summary.tex
+% Table I: Dataset Summary (Properly fitted, no cut-off)
+\begin{table*}[!t]
+\caption{Summary of Brain MRI Datasets Evaluated in This Study (With Official Repository Links)}
+\label{tab:datasets}
+\centering
+\renewcommand{\arraystretch}{1.25}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllcccll}
+\hline
+\textbf{Dataset} & \textbf{Source Repository} & \textbf{Tumor Classes} & \textbf{Matched Slices} & \textbf{Resolution} & \textbf{Masks} & \textbf{Split Strategy} & \textbf{Test Slices} \\
+\hline
+D1 (Atika Akter) & Kaggle~\cite{dataset_d1_atika} & 4 (Normal, Glioma, Meningioma, Pituitary) & 4{,}237 & $512{\times}512$ & Complete & 80/20 Stratified & 848 slices \\
+D2 (Shubham Gajjar) & Kaggle~\cite{dataset_d2_gajjar} & 5$^{\dagger}$ (Gliomas, Glioblastoma, Meningioma, Astrocytoma, Neurocytoma) & 3{,}349$^{\ddagger}$ & $224{\times}224$ & Matched & 80/20 Stratified & 693 slices \\
+D3 (Mixed Dataset) & Kaggle~\cite{dataset_d3_junaid} & 4 (Normal, Glioma, Meningioma, Pituitary) & 6{,}380 & $512{\times}512$ & Complete & 80/20 Stratified & 1{,}276 slices \\
+Figshare (Cheng et al.) & Figshare / Kaggle~\cite{dataset_figshare_cheng, cheng2015enhanced} & 3 (Glioma, Meningioma, Pituitary) & 3{,}064 & $512{\times}512$ & Complete & \textbf{Patient-Level} (46 patients) & 629 slices \\
+\hline
+\multicolumn{8}{l}{$^{\dagger}$ Kaggle D2 contains 5 distinct pathological classes without a normal tissue category: Gliomas (1,237), Glioblastoma (732), Meningioma (640), Astrocytoma (529), Neurocytoma (211).} \\
+\multicolumn{8}{l}{$^{\ddagger}$ Total matched image-mask pairs equals 3,349 slices (from 3,465 total directory images). Evaluation uses 80/20 stratified partitioning.}
+\end{tabular}%
+}
+\end{table*}
